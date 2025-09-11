@@ -1,3 +1,6 @@
+import java.util.Locale
+import java.util.Locale.getDefault
+
 fun main(args: Array<String>) {
     val s = "Rhinopotamus"
     println(s.startsWith("rhin"))
@@ -6,7 +9,7 @@ fun main(args: Array<String>) {
     println(s.contains("lol"))
     //toUpperCase() and toLowerCase()
     var config = "Fullscreen shaDows autosave"
-    config = config.toLowerCase()
+    config = config.lowercase(getDefault())
     println("Will the game run in fullscreen?")
     println(config.contains("fullscreen"))
     println("Will shadows be turned on?")
